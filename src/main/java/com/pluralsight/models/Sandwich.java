@@ -18,7 +18,7 @@ public class Sandwich {
     private ArrayList<String> sauces;
 
 
- 
+
     // keep track of total price
     private double totalPrice;
 
