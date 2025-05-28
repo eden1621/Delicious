@@ -62,33 +62,38 @@ public class Order {
         return drinks;
     }
 
+    public void setChips(ArrayList<String> chips) {
+        this.chips = chips;
+    }
+
     // getChips:
     //   - return list of chips
     public ArrayList<String> getChips() {
         return chips;
     }
 
-    // getOrderSummary method:
-    //   - return formatted string of all items and total
+    //summary of the order with all items and the total cost
     public String getOrderSummary() {
-        StringBuilder summary = new StringBuilder();
-        summary.append("Order Summary:\n");
+        StringBuilder summary = new StringBuilder(); // A tool to build the summary text
+        summary.append("===== Your Order Summary =====\n");
 
-        // List sandwiches
+        // Add sandwiches to the summary
         summary.append("Sandwiches:\n");
-        for (Sandwich s : sandwiches) {
-            summary.append(s.getSummary()).append("\n\n");
+        for (Sandwich sandwich : sandwiches) {
+            summary.append(sandwich.getSummary()); // Add info about each sandwich
+            summary.append("\n\n"); // Extra line
         }
 
-        // List drinks
+        // Add drinks to the summary
         summary.append("Drinks: ").append(drinks).append("\n");
 
-        // List chips
+        // Add chips to the summary
         summary.append("Chips: ").append(chips).append("\n");
 
-        // Total price
-        summary.append(String.format("Total Price: $%.2f", totalPrice));
+        // Add total price
+        summary.append(String.format("Total Price: $%.2f\n", totalPrice));
 
-        return summary.toString();
+        return summary.toString(); // Give back the full summary as a string
     }
+
 }
