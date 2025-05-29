@@ -1,17 +1,18 @@
 package com.pluralsight.models;
 
-import com.pluralsight.ui.OrderScreen;
-
-public class Chips extends OrderScreen {
-    private String name
-    private double price = 1.50;
-    public Chips(String name) {
-        this.name = name;
+public class Chips implements Menu{
+    private String type;
+    public Chips(String type) {
+        this.type = type;
     }
-     @Override
-    public String getDescription() {return name + "Chips";}
-    @Override
-    public double getPrice(){ return price;
 
+    @Override
+    public double getPrice() {
+        return 1.50;
+    }
+
+    @Override
+    public String toString() {
+        return type + " chips - $" + String.format("%.2f", getPrice());
     }
 }

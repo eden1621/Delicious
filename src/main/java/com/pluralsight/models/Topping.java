@@ -1,32 +1,42 @@
 package com.pluralsight.models;
 
-import java.util.Scanner;
+public class Topping{
+    private String name;
+    private boolean isPremium;
+    private boolean isExtra;
 
-public class Topping {
+    public Topping(String name, boolean isPremium, boolean isExtra) {
+        this.name = name;
+        this.isPremium = isPremium;
+        this.isExtra = isExtra;
+    }
 
+    public String getName() {
+        return name;
+    }
 
-    private String addSize() {
-        System.out.println("Select Sandwich Size:");
-        System.out.println("1. 4 inch");
-        System.out.println("2. 8 inch");
-        System.out.println("3. 12 inch");
+    public boolean isPremium() {
+        return isPremium;
+    }
 
-        Scanner scanner = new Scanner(System.in);
+    public boolean isExtra() {
+        return isExtra;
+    }
 
-        String choice = scanner.nextLine();
-        switch (choice) {
-            case "1":
-                System.out.println("you chose the size of 4 inches. ");
-                return "4";
-            case "2":
-                System.out.println("you chose the size of 4 inches. ");
-                return "8";
-            case "3":
-                System.out.println("you chose the size of 4 inches. ");
-                return "12";
+    public void setName(String name) {
+        this.name = name;
+    }
 
-            default:
-                System.out.println("Invalid size option.");
-        }
+    public void setPremium(boolean premium) {
+        isPremium = premium;
+    }
+
+    public void setExtra(boolean extra) {
+        isExtra = extra;
+    }
+
+    @Override
+    public String toString() {
+        return name + (isExtra ? " (extra)" : "");
     }
 }

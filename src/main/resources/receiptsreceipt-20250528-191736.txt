@@ -1,0 +1,13 @@
+RECEIPT
+====================
+Order Details:
+Sandwich 1:
+12" wheat sandwich
+Meats: [ham, chicken]
+Cheeses: [american, swiss]
+Toppings: [jalapeños, onions, guacamole]
+Sauces: []
+Price: $16.30
+Chips 1: BBQ chips - $1.50
+Total Price: 17.8
+====================

@@ -1,24 +1,42 @@
 package com.pluralsight.models;
 
-import com.pluralsight.ui.OrderScreen;
+public class Drink implements Menu {
+    private String size; // "Small", "Medium", "Large"
+    private String flavor;
 
-public class Drink implements OrderScreen {
-    private String name;
-    private String size;
-    private double price;
-
-    public Drink(String name, String size) {
-        this.name = name;
+    public Drink(String size, String flavor) {
         this.size = size;
-        switch (size){
-            case "Small":price =2.00;break;
-            case "Medium": price= 2.50;break;
-            case "Large" : price=3.00;break;
-
-        }
+        this.flavor = flavor;
     }
-    @Override
-    public String getDescription(){return size + " " +name
 
+
+    public String getFlavor() {
+        return flavor;
+    }
+
+    public void setFlavor(String flavor) {
+        this.flavor = flavor;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public double getPrice() {
+        return switch (size.toLowerCase()) {
+            case "small" -> 2.00;
+            case "medium" -> 2.50;
+            case "large" -> 3.00;
+            default -> 0.0;
+        };
+    }
+
+    @Override
+    public String toString() {
+        return size + " " + flavor + " drink - $" + String.format("%.2f", getPrice());
     }
 }
