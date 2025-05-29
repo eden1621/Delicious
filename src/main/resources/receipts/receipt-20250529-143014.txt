@@ -1,0 +1,6 @@
+RECEIPT
+====================
+Order Details:
+Drink 1: small Fanta drink - $2.00
+Total Price: 2.0
+====================

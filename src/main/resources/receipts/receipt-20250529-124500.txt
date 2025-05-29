@@ -1,0 +1,12 @@
+RECEIPT
+====================
+Order Details:
+Sandwich 1:
+12" wheat sandwich (toasted)
+Meats: []
+Cheeses: [cheddar]
+Toppings: [peppers, tomatoes, jalapeños]
+Sauces: []
+Price: $9.40
+Total Price: 9.4
+====================
