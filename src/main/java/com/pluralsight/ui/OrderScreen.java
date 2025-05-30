@@ -27,7 +27,7 @@ public class OrderScreen {
             System.out.println("5) View Order");//to view
             System.out.println("0) Cancel Order"); //to clear the order
             Scanner scanner = new Scanner(System.in);
-            int choice = scanner.nextInt(); user choose
+            int choice = scanner.nextInt();
             switch (choice) {
                 case 1: {
                     System.out.println("Please add Sandwich");
@@ -63,7 +63,6 @@ public class OrderScreen {
             }
         }
     }
-/    // This method helps add sandwich
 
     public Sandwich addSandwich() {
         String breadType = null;
@@ -138,7 +137,6 @@ public class OrderScreen {
             }
         }
     }
-    // This method helps add breadtyoe
 
     public String addBreadType() {
         System.out.println("1. White bread");
@@ -158,7 +156,6 @@ public class OrderScreen {
             }
         }
     }
-    // This method helps add toppings
 
     public List<Topping> addToppings(boolean isExtra) {
         Scanner scanner1 = new Scanner(System.in);
@@ -216,7 +213,6 @@ public class OrderScreen {
             }
         }
     }
-    // This method helps add sauces
 
     private List<Topping> addSauces() {
         Scanner scanner1 = new Scanner(System.in);
@@ -262,7 +258,6 @@ public class OrderScreen {
     }
 
 
-    // This method helps add cheeses
 
     private List<Topping> addCheeses() {
                 Scanner scanner1 = new Scanner(System.in);
@@ -302,7 +297,6 @@ public class OrderScreen {
 
             }
     }
-    // This method helps add meat
 
     private List<Topping> addMeat() {
             Scanner scanner1 = new Scanner(System.in);
@@ -351,7 +345,6 @@ public class OrderScreen {
 
 
         }
-    // This method helps add size
 
     private int addSize() {
         System.out.println("Select Sandwich Size:");
@@ -370,7 +363,6 @@ public class OrderScreen {
             }
         }
     }
-    // This method helps choice if they want toasted
 
     public boolean addToasted(){
         Scanner scanner = new Scanner(System.in);
@@ -385,7 +377,6 @@ public class OrderScreen {
         return false;
     }
 
-    // This method helps add drink
 
     public Drink addDrink() {
         String name = null;
@@ -438,7 +429,6 @@ public class OrderScreen {
         }
         return new Drink(size, name);
     }
-    // This method helps add chips
 
     private Chips addChips() {
         Scanner scanner = new Scanner(System.in);

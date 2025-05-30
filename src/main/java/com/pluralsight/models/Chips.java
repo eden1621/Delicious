@@ -2,7 +2,7 @@ package com.pluralsight.models;
 //
 
 public class Chips implements Menu{
-    private String type;
+    private String type;// type of chips
     public Chips(String type) {
         this.type = type;
     }

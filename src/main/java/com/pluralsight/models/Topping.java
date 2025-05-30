@@ -10,7 +10,7 @@ public class Topping{
         this.isPremium = isPremium;
         this.isExtra = isExtra;
     }
-
+//getter
     public String getName() {
         return name;
     }

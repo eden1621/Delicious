@@ -12,7 +12,7 @@ public class HomeScreen {
            Scanner scanner = new Scanner(System.in);//Get input from the user
            int choice = scanner.nextInt();//what customer choose
            switch (choice) {
-               case 1: {
+               case 1: {// to get new order
                    System.out.println("Choose your order ");
                    OrderScreen orderScreen = new OrderScreen();
                    orderScreen.order();
