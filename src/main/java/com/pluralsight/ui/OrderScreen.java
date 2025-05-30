@@ -156,7 +156,7 @@ public class OrderScreen {
             }
         }
     }
-
+//Prompts the user to add toppings to their order.
     public List<Topping> addToppings(boolean isExtra) {
         Scanner scanner1 = new Scanner(System.in);
         List<Topping> toppings = new ArrayList<>();
@@ -171,7 +171,7 @@ public class OrderScreen {
             System.out.println("7. pickles");
             System.out.println("8. guacamole");
             System.out.println("9. mushrooms");
-            System.out.println("0. Done ");
+            System.out.println("0. Done ");//The process repeats until the user chooses "Done" by entering 0.
 
             int choice = scanner1.nextInt();
 
@@ -432,7 +432,7 @@ public class OrderScreen {
 
     private Chips addChips() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter chip type (e.g., BBQ, Sour Cream, Plain): ");
+        System.out.print("Enter chip type ( BBQ, Sour Cream, Plain): ");
         String type = scanner.nextLine();
         return new Chips(type);
     }
