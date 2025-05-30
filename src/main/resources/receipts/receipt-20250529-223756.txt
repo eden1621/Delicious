@@ -1,0 +1,12 @@
+RECEIPT
+====================
+Order Details:
+Sandwich 1:
+0" white sandwich
+Meats: []
+Cheeses: []
+Toppings: []
+Sauces: []
+Price: $0.00
+Total Price: 0.0
+====================

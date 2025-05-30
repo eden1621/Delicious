@@ -14,7 +14,7 @@ public class ReceiptWriter {
         String path = "src/main/resources/receipts/";
         File directory = new File(path);
         if (!directory.exists()){
-            directory.mkdir();
+           // directory.mkdir();
         }
         String filename = path + "receipt-" + generateTimestamp() + ".txt";
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
