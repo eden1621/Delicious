@@ -109,3 +109,100 @@ src/main/resources/receipts/receipt-yyyyMMdd-HHmmss.txt
 Eden Mengistu 
 Java Developer & Software Enthusiast
 05/29/2025
+
+Diagram
+
+```mermaid
+classDiagram
+    %% Interfaces
+    class Menu {
+        <<interface>>
+        +double getPrice()
+    }
+
+    %% Drink class
+    class Drink {
+        - String size
+        - String flavor
+        +double getPrice()
+        +String toString()
+    }
+    Drink ..|> Menu
+
+    %% Chips class
+    class Chips {
+        - String type
+        +double getPrice()
+        +String toString()
+    }
+    Chips ..|> Menu
+
+    %% Topping class
+    class Topping {
+        - String name
+        - boolean isSauce
+        - boolean isExtra
+        +double getPrice()
+        +String toString()
+    }
+
+    %% Sandwich class
+    class Sandwich {
+        - boolean isToasted
+        - int size
+        - String breadType
+        - List~Topping~ meats
+        - List~Topping~ cheeses
+        - List~Topping~ regularToppings
+        - List~Topping~ sauces
+        +double getPrice()
+        +String toString()
+    }
+    Sandwich ..|> Menu
+    Sandwich o-- Topping : uses
+
+    %% Order class
+    class Order {
+        - List~Sandwich~ sandwiches
+        - List~Drink~ drinks
+        - List~Chips~ chips
+        +void addSandwich(Sandwich)
+        +void addDrink(Drink)
+        +void addChips(Chips)
+        +String getOrderDetails()
+    }
+    Order o-- Sandwich
+    Order o-- Drink
+    Order o-- Chips
+
+    %% ReceiptWriter class
+    class ReceiptWriter {
+        +void saveReceipt(Order)
+        +String printAndGetDetail(Order)
+    }
+
+    %% UI classes
+    class DeliciousApp {
+        +void main(String[] args)
+    }
+
+    class HomeScreen {
+        +void runHomeScreen()
+    }
+
+    class OrderScreen {
+        - Order order
+        - ReceiptWriter receiptWriter
+        +void order()
+        +Sandwich addSandwich()
+        +Drink addDrink()
+        +Chips addChips()
+    }
+
+    %% Relationships
+    OrderScreen --> Order
+    OrderScreen --> ReceiptWriter
+    DeliciousApp --> HomeScreen
+    HomeScreen --> OrderScreen
+```
+
