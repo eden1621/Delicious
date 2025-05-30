@@ -9,10 +9,12 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class ReceiptWriter {
+    // This method saves the receipt to a text file
 
     public void saveReceipt(Order order) {
+        //path
         String path = "src/main/resources/receipts/";
-        File directory = new File(path);
+        File directory = new File(path);//Create a folder (directory) if it doesn't exi
         if (!directory.exists()){
            // directory.mkdir();
         }
@@ -28,10 +30,12 @@ public class ReceiptWriter {
         String receipt = "====================\n"
                 + order.getOrderDetails()
                 + "====================\n";
+        // Show the receipt on the screen
+
         System.out.println(receipt);
         return receipt;
     }
-
+// to use in the receipt file name
     private static String generateTimestamp() {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");

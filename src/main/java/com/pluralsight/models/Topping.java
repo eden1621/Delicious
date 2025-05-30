@@ -34,7 +34,7 @@ public class Topping{
     public void setExtra(boolean extra) {
         isExtra = extra;
     }
-
+    // Returns a string like (extra)"
     @Override
     public String toString() {
         return name + (isExtra ? " (extra)" : "");

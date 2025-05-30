@@ -1,9 +1,9 @@
 package com.pluralsight.models;
 
 import java.util.List;
-
+//Customize
 public class Sandwich implements Menu{
-    private int size;
+    private int size; // Listing
     private String bread;
     private List<Topping> meats;
     private List<Topping> cheeses;
@@ -20,7 +20,7 @@ public class Sandwich implements Menu{
         this.regularToppings = regularToppings;
         this.sauces = sauces;
     }
-
+// gets total sandwich price
     @Override
     public double getPrice() {
         double basePrice = getBasePrice();
@@ -28,6 +28,7 @@ public class Sandwich implements Menu{
         double cheesePrice = getCheesePrice();
         return basePrice + meatPrice + cheesePrice;
     }
+    // Calculates the cost of meat toppings, including extra charges
 
     private double getMeatPrice() {
         double price  = 0.0;
@@ -50,6 +51,7 @@ public class Sandwich implements Menu{
         }
         return price;
     }
+    // Calculates the cost of cheese toppings, including extra charges
 
     private double getCheesePrice() {
         double price  = 0.0;
@@ -72,7 +74,7 @@ public class Sandwich implements Menu{
         }
         return price;
     }
-
+//it is depending the size of bread
     private double getBasePrice() {
         return switch (size) {
             case 4 -> 5.50;
@@ -81,6 +83,7 @@ public class Sandwich implements Menu{
             default -> 0.0;
         };
     }
+    // Getters and setters
 
     public void addMeat(Topping meat) {
         meats.add(meat);
@@ -155,7 +158,7 @@ public class Sandwich implements Menu{
     }
 
 
-
+//summary of the sandwich
     @Override
     public String toString() {
         return size + "\" " + bread + " sandwich" +
